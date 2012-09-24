@@ -10,7 +10,9 @@ $h-gutter: $v-gutter;
 
 /* IMPORTS */
 @import "normalize";
-
+@import "compass/css3/font-face";
+@import "mixins";
+@import "typography";
 
 /* LAYOUT */
 $page-content-width: 580px;

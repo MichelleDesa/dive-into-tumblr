@@ -1,0 +1,77 @@
+/* TYPOGRAPHY */
+
+$base-font-size: 16px;
+$base-line-height: 1.3;
+$header-line-height: 1;
+
+$h1-font-size: 48px;
+$h2-font-size: 40px;
+$h3-font-size: 30px;
+$h4-font-size: 24px;
+$h5-font-size: 20px;
+$h6-font-size: 18px;
+
+$font-body: "Junction", sans-serif;
+$font-header: "IM-fell-SC", sans-serif;
+$font-separator: "IM-fell-flowers";
+
+@include font-face("Junction",
+                   font-files("Junction/j.woff", woff,
+                              "Junction/j.ttf", truetype,
+                              "Junction/j.svg#JUnction",svg),
+                    "IM-fell-SCJunction/j.eot");
+
+@include font-face("IM-fell-SC",
+                   font-files("IM-fell-SC/ifs.woff", woff,
+                              "IM-fell-SC/ifs.ttf", truetype,
+                              "IM-fell-SC/ifs.svg#IM-fell-SC",svg),
+                    "IM-fell-SC/ifs.eot");
+
+@include font-face("IM-fell-flowers",
+                   font-files("IM-fell-flowers/iff.woff", woff,
+                              "IM-fell-flowers/iff.ttf", truetype,
+                              "IM-fell-flowers/iff.svg#IM-fell-flowers",svg),
+                    "IM-fell-SC/ifs.eot");
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* font: normal #{$base-font-size}/#{$base-line-height} $font-body; */
+    @include rem($base-font-size);
+    font-family: $font-body;
+    line-height: $base-line-height;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+    line-height: $header-line-height;
+    text-rendering: optimizeLegibility;
+    margin: $h-gutter/2 0;
+}
+
+h1 {
+    @include rem($h1-font-size);
+}
+
+h2 {
+    @include rem($h2-font-size);
+}
+
+h3 {
+    @include rem($h3-font-size);
+}
+
+h4 {
+    @include rem($h4-font-size);
+}
+
+h5 {
+    @include rem($h5-font-size);
+}
+
+h6 {
+    @include rem($h6-font-size);
+}
