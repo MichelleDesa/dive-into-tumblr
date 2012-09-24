@@ -61,6 +61,7 @@ html {
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */
+  height: 100%;
 }
 
 /*
@@ -433,6 +434,7 @@ p {
 /* THEME */
 body {
   color: #222222;
+  border-top: 5px solid #222222;
 }
 
 a {
@@ -498,20 +500,15 @@ figcaption, .caption {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-.post-metadata li:first-child, .post-metadata li.first {
-  padding-left: 0;
-}
-.post-metadata li:last-child {
-  padding-right: 0;
-}
-.post-metadata li.last {
-  padding-right: 0;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .posts {
@@ -531,6 +528,12 @@ figcaption, .caption {
   text-align: center;
   display: block;
   margin: 30px 0;
+}
+
+.inline-separator {
+  font-family: "IM-fell-flowers";
+  display: inline-block;
+  margin: 0 30px;
 }
 
 .post .post-content {
@@ -564,4 +567,48 @@ figcaption, .caption {
 }
 .quote-source:before {
   content: "\2014";
+}
+
+footer {
+  text-align: center;
+  background-color: #e54135;
+  padding: 10px 0;
+}
+footer .misc-links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+footer .misc-links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer .misc-links a {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: "IM-fell-SC", sans-serif;
+  color: #222222;
+  border-color: #222222;
+}
+
+.credits {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 40px 0 0;
+}
+.credits .created-by {
+  display: block;
+  margin-bottom: 6.66667px;
 }

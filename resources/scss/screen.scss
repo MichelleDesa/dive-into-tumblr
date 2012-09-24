@@ -12,7 +12,7 @@ $h-gutter: $v-gutter;
 /* IMPORTS */
 @import "normalize";
 @import "compass/css3/font-face";
-@import "compass/typography/lists/horizontal-list";
+@import "compass/typography/lists/inline-block-list";
 @import "compass/css3/border-radius";
 @import "mixins";
 @import "typography";
@@ -31,6 +31,7 @@ $page-content-width: 580px;
 /* THEME */
 body {
     color: $color-body-text;
+    border-top: 5px solid $color-body-text;
 }
 
 a {
@@ -75,7 +76,7 @@ $type-icon-size: 40px;
 }
 
 .post-metadata {
-    @include horizontal-list;
+    @include inline-block-list($h-gutter/4);
     float: right;
     line-height: $type-icon-size;
 }
@@ -90,6 +91,12 @@ $type-icon-size: 40px;
     text-align: center;
     display: block;
     margin: $v-gutter*1.5 0;
+}
+
+.inline-separator {
+    font-family: $font-separator;
+    display: inline-block;
+    margin: 0 $h-gutter*1.5;
 }
 
 .post {
@@ -124,5 +131,29 @@ $type-icon-size: 40px;
     margin: $v-gutter/2 0;
     &:before {
         content: "\2014"; //Unicode for &mdash;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: $color-highlight;
+    padding: $v-gutter/2 0;
+    .misc-links {
+        @include inline-block-list($h-gutter);
+        a {
+            @include rem($h4-font-size);
+            font-family: $font-header;
+            color: $color-body-text;
+            border-color: $color-body-text;
+        }
+    }
+}
+
+.credits {
+    @include rem($smaller-font-size);
+    margin: $v-gutter*2 0 0;
+    .created-by {
+        display: block;
+        margin-bottom: $v-gutter/3;
     }
 }
