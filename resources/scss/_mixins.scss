@@ -28,3 +28,14 @@ $baseline-px: 10px !default;
         height: $height + px;
     }
 }
+
+
+@mixin vertical-list($h-margin: 0, $v-margin: 0, $padding: 0)
+{
+    padding: 0;
+    > li {
+        @include no-bullet;
+        padding: $padding;
+        margin: $h-margin $v-margin;
+    }
+}
