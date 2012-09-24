@@ -353,20 +353,20 @@ table {
 /* TYPOGRAPHY */
 @font-face {
   font-family: "Junction";
-  src: url('../fonts/IM-fell-SCJunction/j.eot');
-  src: url('../fonts/IM-fell-SCJunction/j.eot?#iefix') format('eot'), url('../fonts/Junction/j.woff') format('woff'), url('../fonts/Junction/j.ttf') format('truetype'), url('../fonts/Junction/j.svg#JUnction') format('svg');
+  src: url('/IM-fell-SCJunction/j.eot');
+  src: url('/IM-fell-SCJunction/j.eot?#iefix') format('eot'), url('../fonts/Junction/j.woff') format('woff'), url('../fonts/Junction/j.ttf') format('truetype'), url('../fonts/Junction/j.svg#JUnction') format('svg');
 }
 
 @font-face {
   font-family: "IM-fell-SC";
-  src: url('../fonts/IM-fell-SC/ifs.eot');
-  src: url('../fonts/IM-fell-SC/ifs.eot?#iefix') format('eot'), url('../fonts/IM-fell-SC/ifs.woff') format('woff'), url('../fonts/IM-fell-SC/ifs.ttf') format('truetype'), url('../fonts/IM-fell-SC/ifs.svg#IM-fell-SC') format('svg');
+  src: url('/IM-fell-SC/ifs.eot');
+  src: url('/IM-fell-SC/ifs.eot?#iefix') format('eot'), url('../fonts/IM-fell-SC/ifs.woff') format('woff'), url('../fonts/IM-fell-SC/ifs.ttf') format('truetype'), url('../fonts/IM-fell-SC/ifs.svg#IM-fell-SC') format('svg');
 }
 
 @font-face {
   font-family: "IM-fell-flowers";
-  src: url('../fonts/IM-fell-SC/ifs.eot');
-  src: url('../fonts/IM-fell-SC/ifs.eot?#iefix') format('eot'), url('../fonts/IM-fell-flowers/iff.woff') format('woff'), url('../fonts/IM-fell-flowers/iff.ttf') format('truetype'), url('../fonts/IM-fell-flowers/iff.svg#IM-fell-flowers') format('svg');
+  src: url('/IM-fell-SC/ifs.eot');
+  src: url('/IM-fell-SC/ifs.eot?#iefix') format('eot'), url('../fonts/IM-fell-flowers/iff.woff') format('woff'), url('../fonts/IM-fell-flowers/iff.ttf') format('truetype'), url('../fonts/IM-fell-flowers/iff.svg#IM-fell-flowers') format('svg');
 }
 
 html {
@@ -419,9 +419,104 @@ h6 {
   font-size: 1.8rem;
 }
 
+p {
+  margin: 10px 0;
+}
+
 /* LAYOUT */
 .page-content {
   width: 580px;
   padding: 10px 10px;
   margin: 20px auto;
+}
+
+/* THEME */
+body {
+  color: #222222;
+}
+
+a {
+  color: #e54135;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+a:hover {
+  border-bottom-style: solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.info {
+  color: #555555;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.description {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* POSTS STYLING */
+.icon_40x40 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.icon_40x40.type-icon {
+  background: transparent url('post-type-icons.png?1348313425') no-repeat 0 0;
+}
+
+.post-metadata {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  float: right;
+  line-height: 40px;
+}
+.post-metadata li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.post-metadata li:first-child, .post-metadata li.first {
+  padding-left: 0;
+}
+.post-metadata li:last-child {
+  padding-right: 0;
+}
+.post-metadata li.last {
+  padding-right: 0;
+}
+
+.post.link .type-icon {
+  background-position: 0 0;
+}
+.post.quote .type-icon {
+  background-position: 0 -61px;
+}
+.post.text .type-icon {
+  background-position: 0 -123px;
+}
+.post.photo .type-icon {
+  background-position: 0 -186px;
+}
+.post.video .type-icon {
+  background-position: 0 -249px;
+}
+.post.audio .type-icon {
+  background-position: 0 -311px;
+}
+.post.chat .type-icon {
+  background-position: 0 -373px;
 }

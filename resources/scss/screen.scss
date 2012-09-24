@@ -2,7 +2,7 @@
 $color-highlight: #e54135;
 $color-header-text: #000;
 $color-body-text: #222;
-$color-info-text: #444;
+$color-info-text: #555;
 
 $v-gutter: 20px;
 $h-gutter: $v-gutter;
@@ -11,8 +11,10 @@ $h-gutter: $v-gutter;
 /* IMPORTS */
 @import "normalize";
 @import "compass/css3/font-face";
+@import "compass/typography/lists/horizontal-list";
 @import "mixins";
 @import "typography";
+
 
 /* LAYOUT */
 $page-content-width: 580px;
@@ -21,4 +23,69 @@ $page-content-width: 580px;
     width: $page-content-width;
     padding: $h-gutter/2 $v-gutter/2;
     margin: $h-gutter auto;
+}
+
+
+/* THEME */
+body {
+    color: $color-body-text;
+}
+
+a {
+    color: $color-highlight;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    &:hover {
+        border-bottom-style: solid;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-header-text;
+}
+
+.info {
+    color: $color-info-text;
+    @include rem($smaller-font-size);
+}
+
+.description {
+    @include rem($larger-font-size);
+}
+
+/* POSTS STYLING */
+@include icon(40, 40);
+
+.icon_40x40.type-icon {
+    @include bg-img(transparent, "post-type-icons.png", no-repeat, 0, 0);
+}
+
+.post-metadata {
+    @include horizontal-list;
+    float: right;
+    line-height: 40px;
+}
+
+.post {
+    &.link .type-icon {
+        background-position: 0 0;
+    }
+    &.quote .type-icon {
+        background-position: 0 -61px;
+    }
+    &.text .type-icon {
+        background-position: 0 -123px;
+    }
+    &.photo .type-icon {
+        background-position: 0 -186px;
+    }
+    &.video .type-icon {
+        background-position: 0 -249px;
+    }
+    &.audio .type-icon {
+        background-position: 0 -311px;
+    }
+    &.chat .type-icon {
+        background-position: 0 -373px;
+    }
 }

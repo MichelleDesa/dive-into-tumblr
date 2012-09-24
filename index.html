@@ -12,24 +12,24 @@
   <body>
     <div class="page-content">
       <h1>Blog title</h1>
-      <p>Description of this tumblr blog</p>
+      <p class="description">Description of this tumblr blog</p>
       <input id="search-posts" type="search" placeholdeer="search">
       <ol class="posts">
-        <li>
-          <article class="post quote">
-            <div class="post-header">
-              <span class="icon type"/>
-              <ul class="post-metadata">
-                <li>
-                  <date>January 8, 2012, 2:23pm</date>
-                </li>
-                <li>
-                  <a href="{post-notes}">
-                    20 notes
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <li class="post quote">
+          <div class="post-header">
+            <ul class="post-metadata info">
+              <li>
+                <time datetime="2012-01-08">January 8, 2012, 2:23pm</time>
+              </li>
+              <li>
+                <a href="{post-notes}">
+                  20 notes
+                </a>
+              </li>
+            </ul>
+            <span class="icon_40x40 type-icon"></span>
+          </div>
+          <article class="post-content">
             <h3>
               It does not matter how slow you go so long as you do not
               stop
@@ -37,7 +37,7 @@
             <div class="quote-source">
               Wisdom of Confucius
             </div>
-            </article>
+          </article>
         </li>
       </ol>
     </div>
