@@ -1,0 +1,22 @@
+/* GLOBAL VARIABLES */
+$color-highlight: #e54135;
+$color-header-text: #000;
+$color-body-text: #222;
+$color-info-text: #444;
+
+$v-gutter: 20px;
+$h-gutter: $v-gutter;
+
+
+/* IMPORTS */
+@import "normalize";
+
+
+/* LAYOUT */
+$page-content-width: 580px;
+
+.page-content {
+    width: $page-content-width;
+    padding: $h-gutter/2 $v-gutter/2;
+    margin: $h-gutter auto;
+}
