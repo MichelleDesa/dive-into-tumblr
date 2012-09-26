@@ -384,6 +384,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "IM-fell-SC", sans-serif;
+  font-weight: normal;
   line-height: 1;
   text-rendering: optimizeLegibility;
   margin: 10px 0;
@@ -693,4 +694,67 @@ footer .misc-links a {
 .credits .created-by {
   display: block;
   margin-bottom: 6.66667px;
+}
+
+.tag-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  zoom: 1;
+}
+.tag-list:before, .tag-list:after {
+  content: "";
+  display: table;
+}
+.tag-list:after {
+  clear: both;
+}
+.tag-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.tag-list .tag .tip {
+  vertical-align: middle;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 8px solid #222222;
+  margin-right: -4px;
+  border-top: 1.4rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-right: 0.8rem solid #222222;
+  margin-right: -0.4rem;
+}
+.tag-list .tag a {
+  font-family: "IM-fell-SC", sans-serif;
+  color: #fff;
+  background-color: #222222;
+  padding: 5px 5px 5px 0;
+  border-width: 0;
+}
+.tag-list .tag a:before {
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-family: "IM-fell-flowers";
+  text-rendering: optimizeLegibility;
+  content: 'C';
+  padding-right: 5px;
+}
+.tag-list .tag:hover .tip {
+  border-right-color: #e54135;
+}
+.tag-list .tag:hover a {
+  background-color: #e54135;
 }

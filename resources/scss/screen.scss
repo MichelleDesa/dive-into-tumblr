@@ -173,3 +173,47 @@ footer {
         margin-bottom: $v-gutter/3;
     }
 }
+
+.tag-list {
+    @include inline-block-list($h-gutter/4);
+    .tag {
+        .tip {
+            vertical-align: middle;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            //Pixel fallback
+            border-top: 14px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 8px solid $color-body-text;
+            margin-right: -4px;
+
+            border-top: 1.4rem solid transparent;
+            border-bottom: 1.5rem solid transparent;
+            border-right: 0.8rem solid $color-body-text;
+            margin-right: -0.4rem;
+        }
+        a {
+            font-family: $font-header;
+            color: #fff;
+            background-color: $color-body-text;
+            padding: $h-gutter/4 $h-gutter/4 $h-gutter/4 0;
+            border-width: 0;
+            &:before {
+                @include rem(36px);
+                font-family: $font-separator;
+                text-rendering: optimizeLegibility;
+                content: 'C';
+                padding-right: $h-gutter/4;
+            }
+        }
+        &:hover {
+            .tip {
+                border-right-color: $color-highlight;
+            }
+            a {
+                background-color: $color-highlight;
+            }
+        }
+    }
+}
