@@ -14,8 +14,11 @@ $h-gutter: $v-gutter;
 @import "compass/css3/font-face";
 @import "compass/typography/lists/inline-block-list";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
 @import "mixins";
 @import "typography";
+@import "forms";
 
 
 /* LAYOUT */
@@ -67,7 +70,8 @@ figcaption, .caption {
     display: block;
 }
 
-/* POSTS STYLING */
+
+/* POSTS AND BLOG CONTENT STYLING */
 $type-icon-size: 40px;
 @include icon(40);
 
@@ -131,6 +135,18 @@ $type-icon-size: 40px;
     margin: $v-gutter/2 0;
     &:before {
         content: "\2014"; //Unicode for &mdash;
+    }
+}
+
+.about-author {
+    @include clearfix;
+    .profile-img {
+        margin-right: $h-gutter;
+        float: left;
+    }
+    .bio {
+        margin: 0;
+        overflow: hidden;
     }
 }
 

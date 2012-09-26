@@ -1,0 +1,42 @@
+/* FORMS */
+
+$input-height: 40px;
+$input-padding: 5px;
+$input-border: $color-border;
+
+input {
+    @include rem($base-font-size);
+    @include rem($input-height, height);
+    @include border-radius;
+    @include default-box-shadow($inset: true);
+    @include box-sizing(border-box);
+    line-height: $base-line-height;
+    width: 100%;
+    padding: $input-padding + 1 $input-padding $input-padding - 1;
+    border: 1px solid $input-border;
+    margin: 0;
+    &:focus {
+        border-color: darken($input-border, 30%);
+        outline: none;
+    }
+    &::-webkit-input-placeholder, &::-moz-placeholder {
+        color: lighten($color-info-text, 30%);
+        padding-top: 1px;
+    }
+}
+
+@include icon(28);
+
+input[type="search"] {
+    padding-right: 40px;
+}
+
+.search-wrapper {
+    position: relative;
+    .search-icon{
+        @include bg-img(transparent, "search-icon.png");
+        position: absolute;
+        top: 6px;
+        right: 5px;
+    }
+}

@@ -39,3 +39,18 @@ $baseline-px: 10px !default;
         margin: $h-margin $v-margin;
     }
 }
+
+
+@mixin clearfix {
+    zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+}
+
+
+@mixin default-box-shadow($color: rgba(0, 0, 0, 0.25), $inset: false) {
+    @if $inset {
+        @include box-shadow($color 0 0 3px inset);
+    }
+    @else { @include box-shadow($color 0 0 3px); }
+}

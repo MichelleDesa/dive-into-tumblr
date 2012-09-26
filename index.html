@@ -13,7 +13,10 @@
     <div class="page-content">
       <h1>Blog title</h1>
       <p class="description">Description of this tumblr blog</p>
-      <input id="search-posts" type="search" placeholdeer="search">
+      <form class="search-wrapper" action="/search" method="get">
+        <input id="search-posts" type="search" name="search-query" placeholder="Search">
+        <span class="search-icon icon_28x28"></span>
+      </form>
       <ol class="posts">
         <li class="post quote">
           <div class="post-header">
@@ -99,7 +102,16 @@
           <span class="post-separator">a</span>
         </li>
       </ol>
+
+    <figure class="about-author">
+      <img src="resources/images/temp/author.gif" alt="Blog author" class="profile-img"/>
+      <figcaption class="bio">
+        <h5>About the author</h5>
+        <p>A little bit about the author of this blog.<br/>And a little more.</p>
+      </figcaption>
+    </figure>
     </div>
+
     <footer>
       <ul class="misc-links">
         <li>
