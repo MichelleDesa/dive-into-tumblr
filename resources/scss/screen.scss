@@ -65,6 +65,14 @@ img {
     border: 1px solid $color-border;
 }
 
+.video-wrapper {
+    iframe, video, embed {
+        @include border-radius;
+        padding: $v-gutter/3 $h-gutter/3;
+        border: 1px solid $color-border;
+    }
+}
+
 figcaption, .caption {
     margin: $v-gutter/2 0;
     display: block;
