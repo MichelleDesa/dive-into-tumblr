@@ -59,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
     @include rem($larger-font-size);
 }
 
+.inline {
+    display: inline;
+}
+
 img {
     @include border-radius;
     padding: $v-gutter/3 $h-gutter/3;
@@ -143,6 +147,21 @@ $type-icon-size: 40px;
     margin: $v-gutter/2 0;
     &:before {
         content: "\2014"; //Unicode for &mdash;
+    }
+}
+
+.post.audio {
+    .post-content {
+        @include clearfix;
+    }
+    .album-art-img {
+        max-width: 150px;
+        float: left;
+        margin-right: $h-gutter;
+    }
+    .caption {
+        margin: 0;
+        overflow: hidden;
     }
 }
 

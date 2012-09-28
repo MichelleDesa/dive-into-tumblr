@@ -513,6 +513,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8rem;
 }
 
+.inline {
+  display: inline;
+}
+
 img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -635,6 +639,26 @@ figcaption, .caption {
 }
 .quote-source:before {
   content: "\2014";
+}
+
+.post.audio .post-content {
+  zoom: 1;
+}
+.post.audio .post-content:before, .post.audio .post-content:after {
+  content: "";
+  display: table;
+}
+.post.audio .post-content:after {
+  clear: both;
+}
+.post.audio .album-art-img {
+  max-width: 150px;
+  float: left;
+  margin-right: 20px;
+}
+.post.audio .caption {
+  margin: 0;
+  overflow: hidden;
 }
 
 .about-author {
