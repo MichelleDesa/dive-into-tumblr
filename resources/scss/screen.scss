@@ -226,6 +226,53 @@ $type-icon-size: 40px;
     }
 }
 
+.nav-list {
+    @include inline-block-list;
+    position: relative;
+    width: 100%;
+    border-top: 1px dashed $color-border;
+    margin: $v-gutter 0;
+    .page-details {
+        @include rem($h2-font-size, "line-height");
+        text-align: center;
+        width: 100%;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 0;
+        &:hover {
+            color: $color-highlight;
+        }
+    }
+    .prev {
+        text-align: left;
+        left: 0;
+        &:before{
+            content: '2';
+            font-family: $font-separator;
+            font-size: $h4-font-size;
+            padding-right: $h-gutter/2;
+        }
+    }
+    .next {
+        text-align: right;
+        right: 0;
+        &:after{
+            content: '1';
+            font-family: $font-separator;
+            font-size: $h4-font-size;
+            padding-left: $h-gutter/2
+        }
+    }
+    a {
+        border: none;
+        color: $color-header-text;
+        &:hover {
+            color: $color-highlight;
+        }
+    }
+}
+
 .about-author {
     @include clearfix;
     .profile-img {

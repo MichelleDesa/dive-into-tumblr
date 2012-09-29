@@ -751,6 +751,76 @@ figcaption, .caption {
   background-color: #e54135;
 }
 
+.nav-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  zoom: 1;
+  position: relative;
+  width: 100%;
+  border-top: 1px dashed #cccccc;
+  margin: 20px 0;
+}
+.nav-list:before, .nav-list:after {
+  content: "";
+  display: table;
+}
+.nav-list:after {
+  clear: both;
+}
+.nav-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+.nav-list .page-details {
+  line-height: 40px;
+  line-height: 4rem;
+  text-align: center;
+  width: 100%;
+}
+.nav-list .prev, .nav-list .next {
+  position: absolute;
+  top: 0;
+}
+.nav-list .prev:hover, .nav-list .next:hover {
+  color: #e54135;
+}
+.nav-list .prev {
+  text-align: left;
+  left: 0;
+}
+.nav-list .prev:before {
+  content: '2';
+  font-family: "IM-fell-flowers";
+  font-size: 24px;
+  padding-right: 10px;
+}
+.nav-list .next {
+  text-align: right;
+  right: 0;
+}
+.nav-list .next:after {
+  content: '1';
+  font-family: "IM-fell-flowers";
+  font-size: 24px;
+  padding-left: 10px;
+}
+.nav-list a {
+  border: none;
+  color: black;
+}
+.nav-list a:hover {
+  color: #e54135;
+}
+
 .about-author {
   zoom: 1;
 }
