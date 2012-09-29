@@ -661,6 +661,33 @@ figcaption, .caption {
   overflow: hidden;
 }
 
+.post.chat .conversation {
+  padding: 0;
+}
+.post.chat .conversation > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+  margin: 0 0;
+}
+.post.chat .conversation :nth-child(even), .post.chat .conversation .even {
+  background-color: #eeeeee;
+}
+.post.chat .conversation :nth-child(odd), .post.chat .conversation .odd {
+  background-color: transparent;
+}
+.post.chat .conversation li {
+  padding: 10px 10px;
+}
+.post.chat .speaker {
+  display: inline;
+}
+.post.chat .speaker:after {
+  content: ':';
+  padding-right: 5px;
+}
+
 .tag-list {
   margin: 0;
   padding: 0;

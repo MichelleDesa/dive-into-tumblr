@@ -54,3 +54,10 @@ $baseline-px: 10px !default;
     }
     @else { @include box-shadow($color 0 0 3px); }
 }
+
+
+// For browsers that do not support nth-child 'even' and 'odd' classes must be set
+@mixin zebra-stripes($even-color, $odd-color: transparent) {
+    :nth-child(even),   .even   { background-color: $even-color; }
+    :nth-child(odd),    .odd    { background-color: $odd-color; }
+}

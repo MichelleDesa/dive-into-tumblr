@@ -4,6 +4,7 @@ $color-header-text: #000;
 $color-body-text: #222;
 $color-info-text: #555;
 $color-border: #ccc;
+$color-gray: #eee;
 
 $v-gutter: 20px;
 $h-gutter: $v-gutter;
@@ -165,6 +166,22 @@ $type-icon-size: 40px;
     }
 }
 
+.post.chat {
+    .conversation {
+        @include vertical-list;
+        @include zebra-stripes($color-gray);
+        li {
+            padding: $v-gutter/2 $h-gutter/2;
+        }
+    }
+    .speaker {
+        display: inline;
+        &:after {
+            content: ':';
+            padding-right: $h-gutter/4;
+        }
+    }
+}
 .tag-list {
     @include inline-block-list($h-gutter/4);
     .tag {
