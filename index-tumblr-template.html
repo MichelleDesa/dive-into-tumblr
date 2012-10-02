@@ -175,13 +175,19 @@
         {/block:Posts}
       </ol>
 
+      {block:Pagination}
       <nav>
         <ul class="nav-list">
-          <li class="prev"><h4 class="inline"><a href="">Previous</a></h4></li>
-          <li class="page-details">Page 1 of 10</li>
-          <li class="next"><h4 class="inline"><a href="">Next</a></h4></li>
+          {block:PreviousPage}
+          <li class="prev"><h4 class="inline"><a href="{PreviousPage">Previous</a></h4></li>
+          {/block:PreviousPage}
+          <li class="page-details">Page {CurrentPage} of {NextPage}</li>
+          {block:NextPage}
+          <li class="next"><h4 class="inline"><a href="{NextPage}">Next</a></h4></li>
+          {/block:NextPage}
         </ul>
       </nav>
+      {/block:Pagination
 
       <figure class="about-author">
         <img src="resources/images/temp/author.gif" alt="Blog author" class="profile-img"/>
