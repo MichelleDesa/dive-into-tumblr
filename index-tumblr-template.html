@@ -84,33 +84,53 @@
 
             {block:Photo}
             <figure>
-              <img src="resources/images/temp/image-500.jpg" alt="Image description"/>
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+              {block:Caption}
               <figcaption class="caption">
-                Passing through Times Square by <a href="">Mareen Fischinger</a>
+                {Caption}
               </figcaption>
+              {/block:Caption}
             </figure>
             {/block:Photo}
 
             {block:Video}
             <figure>
               <div class="video-wrapper">
-                <iframe width="500" height="281" src="http://www.youtube.com/embed/alJaltUmrGo" frameborder="0" allowfullscreen></iframe>
+                {Video-500}
               </div>
+              {block:Caption}
               <figcaption class="caption">
-                Passing through Times Square video
+                {Caption}
               </figcaption>
+              {/block:Caption}
             </figure>
             {/block:Video}
 
             {block:Audio}
             <figure>
-              <img class="album-art-img" Src="resources/images/temp/al.jpg"
-                   alt="Image description"/>
+              {AudioEmbed-500}
+              {block:AlbumArt}
+              <img class="album-art-img" src="{AlbumArtURL}" alt="Album art"/>
+              {/block:AlbumArt}
               <figcaption class="caption">
-                <p><h5 class="inline">Fingers Crossed</h5><span class="info"> by Allison Weiss from
-                    the album </span><h5 class="inline">Was right all along</h5></p>
-                <embed type="application/x-shockwave-flash" src="http://assets.tumblr.com/swf/audio_player_black.swf?audio_file=http://www.tumblr.com/audio_file/defier-of-fate/32341556238/tumblr_maz1e0CWl21rpimay&amp;color=FFFFFF" height="27" width="207" quality="best" wmode="opaque">
-                  {block:PlayCount}<p class="info">Played by {PlayCount}</p>{/block:PlayCount}
+                {block:Caption}
+                <p>
+                {Caption}
+                </p>
+                {/block:Caption}
+                <p>
+                  {block:TrackName}
+                  <h5 class="inline">{TrackName}</h5>
+                  {/block:TrackName}
+                  {block:Artist}
+                  <span class="info"> by {Artist}</span>
+                  {/block:Artist}
+                  {block: Album}
+                  <span class="info"> from {Album}</span>
+                  {/block:Album}
+                </p>
+                  {block:PlayCount}<p class="info">Played by
+                  {PlayCount} people</p>{/block:PlayCount}
               </figcaption>
             </figure>
             {/block:Audio}
