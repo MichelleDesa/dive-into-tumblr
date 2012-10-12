@@ -4,6 +4,7 @@
     <title>
       {Title}
     </title>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" media="screen, projection" href="resources/css/screen.css">
     <!--[if IE]>
         <link rel="stylesheets" media="screen, projection" href="resources/css/ie.css">
@@ -112,7 +113,9 @@
 
             {block:Audio}
             <figure>
+              {block:AudioEmbed}
               {AudioEmbed-500}
+              {/block:AudioEmbed}
               {block:AlbumArt}
               <img class="album-art-img" src="{AlbumArtURL}" alt="Album art"/>
               {/block:AlbumArt}
@@ -129,7 +132,7 @@
                   {block:Artist}
                   <span class="info"> by {Artist}</span>
                   {/block:Artist}
-                  {block: Album}
+                  {block:Album}
                   <span class="info"> from {Album}</span>
                   {/block:Album}
                 </p>
@@ -143,7 +146,7 @@
             <h3>
               <a href="{URL}">{Name}</a>
             </h3>
-            {block:Decription}
+            {block:Description}
             <p>
               {Description}
             </p>
@@ -185,13 +188,13 @@
           {block:PreviousPage}
           <li class="prev"><h4 class="inline"><a href="{PreviousPage">Previous</a></h4></li>
           {/block:PreviousPage}
-          <li class="page-details">Page {CurrentPage} of {NextPage}</li>
+          <li class="page-details">Page {CurrentPage} of {TotalPages}</li>
           {block:NextPage}
           <li class="next"><h4 class="inline"><a href="{NextPage}">Next</a></h4></li>
           {/block:NextPage}
         </ul>
       </nav>
-      {/block:Pagination
+      {/block:Pagination}
 
       <figure class="about-author">
         <img src="{PortraitURL-128}" alt="Blog author" class="profile-img"/>
