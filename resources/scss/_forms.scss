@@ -34,7 +34,7 @@ input[type="search"] {
 .search-wrapper {
     position: relative;
     .search-icon{
-        @include bg-img(transparent, "search-icon.png");
+        @include bg-img(transparent, "http://static.tumblr.com/8to5hpx/6Oombepkc/search-icon.png");
         position: absolute;
         top: 6px;
         right: 5px;

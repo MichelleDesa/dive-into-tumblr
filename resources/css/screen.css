@@ -353,20 +353,14 @@ table {
 /* TYPOGRAPHY */
 @font-face {
   font-family: "Junction";
-  src: url('../fonts/IM-fell-SCJunction/j.eot');
-  src: url('../fonts/IM-fell-SCJunction/j.eot?#iefix') format('eot'), url('../fonts/Junction/j.woff') format('woff'), url('../fonts/Junction/j.ttf') format('truetype'), url('../fonts/Junction/j.svg#JUnction') format('svg');
+  src: url(http://static.tumblr.com/8to5hpx/YdHmbeqk6/j.eot);
+  src: url(http://static.tumblr.com/8to5hpx/YdHmbeqk6/j.eot?#iefix) format('eot'), url(http://static.tumblr.com/8to5hpx/TcOmbeqmx/j.woff) format('woff'), url(http://static.tumblr.com/8to5hpx/J1bmbeqm7/j.ttf) format('truetype'), url(http://static.tumblr.com/8to5hpx/0xfmbeqln/j.svg#JUnction) format('svg');
 }
 
 @font-face {
-  font-family: "IM-fell-SC";
-  src: url('../fonts/IM-fell-SC/ifs.eot');
-  src: url('../fonts/IM-fell-SC/ifs.eot?#iefix') format('eot'), url('../fonts/IM-fell-SC/ifs.woff') format('woff'), url('../fonts/IM-fell-SC/ifs.ttf') format('truetype'), url('../fonts/IM-fell-SC/ifs.svg#IM-fell-SC') format('svg');
-}
-
-@font-face {
-  font-family: "IM-fell-flowers";
-  src: url('../fonts/IM-fell-SC/ifs2.eot');
-  src: url('../fonts/IM-fell-SC/ifs2.eot?#iefix') format('eot'), url('../fonts/IM-fell-flowers/iff2.woff') format('woff'), url('../fonts/IM-fell-flowers/iff2.ttf') format('truetype'), url('../fonts/IM-fell-flowers/iff2.svg#IM-fell-flowers') format('svg');
+  font-family: "IM Fell Flowers";
+  src: url(http://static.tumblr.com/8to5hpx/KjFmbko68/iff2.eot);
+  src: url(http://static.tumblr.com/8to5hpx/KjFmbko68/iff2.eot?#iefix) format('eot'), url(http://static.tumblr.com/8to5hpx/6aEmbkoad/iff2.woff) format('woff'), url(http://static.tumblr.com/8to5hpx/ldGmbko8z/iff2.ttf) format('truetype'), url(http://static.tumblr.com/8to5hpx/bc3mbko8g/iff2.svg#IM-fell-flowers) format('svg');
 }
 
 html {
@@ -383,7 +377,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "IM-fell-SC", sans-serif;
+  font-family: "IM Fell English SC", serif;
   font-weight: normal;
   line-height: 1;
   text-rendering: optimizeLegibility;
@@ -470,7 +464,7 @@ input[type="search"] {
   position: relative;
 }
 .search-wrapper .search-icon {
-  background: transparent url('../images/search-icon.png?1348639118') no-repeat 0 0;
+  background: transparent url(http://static.tumblr.com/8to5hpx/6Oombepkc/search-icon.png) no-repeat 0 0;
   position: absolute;
   top: 6px;
   right: 5px;
@@ -550,7 +544,7 @@ figcaption, .caption {
 }
 
 .icon_40x40.type-icon {
-  background: transparent url('../images/post-type-icons.png?1348313425') no-repeat 0 0;
+  background: transparent url(http://static.tumblr.com/8to5hpx/HT5mbeph3/post-type-icons.png) no-repeat 0 0;
 }
 
 .post-metadata {
@@ -596,14 +590,14 @@ figcaption, .caption {
 }
 
 .post-separator {
-  font-family: "IM-fell-flowers";
+  font-family: "IM Fell Flowers";
   text-align: center;
   display: block;
   margin: 30px 0;
 }
 
 .inline-separator {
-  font-family: "IM-fell-flowers";
+  font-family: "IM Fell Flowers";
   display: inline-block;
   margin: 0 30px;
 }
@@ -730,7 +724,7 @@ figcaption, .caption {
   margin-right: -0.4rem;
 }
 .tag-list .tag a {
-  font-family: "IM-fell-SC", sans-serif;
+  font-family: "IM Fell English SC", serif;
   color: #fff;
   background-color: #222222;
   padding: 5px 5px 5px 0;
@@ -739,7 +733,7 @@ figcaption, .caption {
 .tag-list .tag a:before {
   font-size: 36px;
   font-size: 3.6rem;
-  font-family: "IM-fell-flowers";
+  font-family: "IM Fell Flowers";
   text-rendering: optimizeLegibility;
   content: 'C';
   padding-right: 5px;
@@ -799,7 +793,7 @@ figcaption, .caption {
 }
 .nav-list .prev:before {
   content: '2';
-  font-family: "IM-fell-flowers";
+  font-family: "IM Fell Flowers";
   font-size: 24px;
   padding-right: 10px;
 }
@@ -809,7 +803,7 @@ figcaption, .caption {
 }
 .nav-list .next:after {
   content: '1';
-  font-family: "IM-fell-flowers";
+  font-family: "IM Fell Flowers";
   font-size: 24px;
   padding-left: 10px;
 }
@@ -885,7 +879,7 @@ footer .misc-links li {
 footer .misc-links a {
   font-size: 24px;
   font-size: 2.4rem;
-  font-family: "IM-fell-SC", sans-serif;
+  font-family: "IM Fell English SC", serif;
   color: #222222;
   border-color: #222222;
 }

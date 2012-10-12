@@ -14,26 +14,20 @@ $h5-font-size: 20px;
 $h6-font-size: 18px;
 
 $font-body: "Junction", sans-serif;
-$font-header: "IM-fell-SC", sans-serif;
-$font-separator: "IM-fell-flowers";
+$font-header: 'IM Fell English SC', serif;
+$font-separator: "IM Fell Flowers";
 
 @include font-face("Junction",
-                   font-files("Junction/j.woff", woff,
-                              "Junction/j.ttf", truetype,
-                              "Junction/j.svg#JUnction",svg),
-                    "IM-fell-SCJunction/j.eot");
+                   font-files("http://static.tumblr.com/8to5hpx/TcOmbeqmx/j.woff", woff,
+                              "http://static.tumblr.com/8to5hpx/J1bmbeqm7/j.ttf", truetype,
+                              "http://static.tumblr.com/8to5hpx/0xfmbeqln/j.svg#JUnction",svg),
+                    "http://static.tumblr.com/8to5hpx/YdHmbeqk6/j.eot");
 
-@include font-face("IM-fell-SC",
-                   font-files("IM-fell-SC/ifs.woff", woff,
-                              "IM-fell-SC/ifs.ttf", truetype,
-                              "IM-fell-SC/ifs.svg#IM-fell-SC",svg),
-                    "IM-fell-SC/ifs.eot");
-
-@include font-face("IM-fell-flowers",
-                   font-files("IM-fell-flowers/iff2.woff", woff,
-                              "IM-fell-flowers/iff2.ttf", truetype,
-                              "IM-fell-flowers/iff2.svg#IM-fell-flowers",svg),
-                    "IM-fell-SC/ifs2.eot");
+@include font-face("IM Fell Flowers",
+                   font-files("http://static.tumblr.com/8to5hpx/6aEmbkoad/iff2.woff", woff,
+                              "http://static.tumblr.com/8to5hpx/ldGmbko8z/iff2.ttf", truetype,
+                              "http://static.tumblr.com/8to5hpx/bc3mbko8g/iff2.svg#IM-fell-flowers",svg),
+                    "http://static.tumblr.com/8to5hpx/KjFmbko68/iff2.eot");
 
 html {
     font-size: 62.5%;
