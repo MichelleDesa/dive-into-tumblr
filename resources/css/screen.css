@@ -342,6 +342,16 @@ a:hover {
   border-bottom-style: solid;
 }
 
+figure a {
+  border-bottom: 0;
+}
+figure .caption a {
+  border-bottom: 1px dotted;
+}
+figure .caption a:hover {
+  border-bottom-style: solid;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: black;
 }
