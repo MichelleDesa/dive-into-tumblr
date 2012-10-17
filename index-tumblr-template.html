@@ -355,16 +355,6 @@
       border-bottom-style: solid;
       }
 
-      figure a {
-      border-bottom: 0;
-      }
-      figure .caption a {
-      border-bottom: 1px dotted;
-      }
-      figure .caption a:hover {
-      border-bottom-style: solid;
-      }
-
       h1, h2, h3, h4, h5, h6 {
       color: black;
       }
@@ -496,6 +486,14 @@
     background-position: 0 -373px;
     }
 
+    .post-content a, .notes a {
+    border-bottom: 0;
+    text-decoration: none;
+    }
+    .post-content a:hover, .notes a:hover {
+    text-decoration: underline;
+    }
+
     .quote-source {
     display: block;
     margin: 10px 0;
@@ -612,6 +610,47 @@
     }
     .tag-list .tag:hover a {
     background-color: #e54135;
+    }
+
+    .notes-wrapper {
+    margin: 30px 0 30px 60px;
+    }
+
+    .notes {
+    padding: 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 0;
+    }
+    .notes > li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    margin: 0 0;
+    }
+    .notes img.avatar {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    padding: 2px;
+    vertical-align: -8px;
+    }
+    .notes .note {
+    padding: 2px 0;
+    }
+    .notes .note blockquote {
+    border-left: 1px solid #666666;
+    padding: 5px 5px;
+    margin: 5px 0px 0 30px;
+    }
+    .notes .note blockquote a {
+    color: #222222;
+    }
+    .notes .action {
+    padding-right: 5px;
     }
 
     .nav-list {
@@ -760,7 +799,7 @@
   </head>
   <body>
     <div class="page-content">
-      <h1>{Title}</h1>
+      <a href="/"><h1>{Title}</h1></a>
       <p class="description">{Description}</p>
       <form class="search-wrapper" action="/search" method="get">
         <input id="search-posts" type="search" name="search-query"
@@ -799,9 +838,16 @@
                 <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{Month} {DayOfMonth}, {Year}, {12Hour}:{Minutes}{AmPm}</time>
               </li>
               {/block:Date}
+              {block:IndexPage}
+              <li>
+                <a href="{Permalink}">
+                  Permalink
+                </a>
+              </li>
+              {/block:IndexPage}
               {block:NoteCount}
               <li>
-                <a href="{Permalink}#notes">
+                <a href="{Permalink}#notes-wrapper">
                   {NoteCountWithLabel}
                 </a>
               </li>
@@ -923,7 +969,15 @@
             </ul>
             {/block:HasTags}
           </article>
+
           <span class="post-separator">a</span>
+
+          {block:PostNotes}
+          <div id="notes-wrapper" class="notes-wrapper">
+            <h4>{NoteCountWithLabel}</h4>
+            {PostNotes}
+          </div>
+          {/block:PostNotes}
         </li>
         {/block:Posts}
       </ol>

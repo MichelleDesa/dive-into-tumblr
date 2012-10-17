@@ -6,9 +6,11 @@ $color-info-text: #555;
 $color-border: #ccc;
 $color-gray: #eee;
 
+$type-icon-size: 40px;
+
 $v-gutter: 20px;
 $h-gutter: $v-gutter;
-
+$post-left-gutter: $type-icon-size + 20px;
 
 /* IMPORTS */
 @import "normalize";
@@ -51,20 +53,6 @@ a {
     }
 }
 
-figure {
-    a {
-        border-bottom: 0;
-    }
-    .caption {
-        a {
-            border-bottom: 1px dotted;
-            &:hover {
-                border-bottom-style: solid;
-            }
-        }
-    }
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: $color-header-text;
 }
@@ -99,7 +87,6 @@ figcaption, .caption {
 
 
 /* POSTS AND BLOG CONTENT STYLING */
-$type-icon-size: 40px;
 @include icon(40);
 
 .icon_40x40.type-icon {
@@ -132,7 +119,7 @@ $type-icon-size: 40px;
 
 .post {
     .post-content {
-        margin-left: $type-icon-size + 20px;
+        margin-left: $post-left-gutter;
     }
     &.link .type-icon {
         background-position: 0 0;
@@ -157,7 +144,17 @@ $type-icon-size: 40px;
     }
 }
 
-.quote-source{
+.post-content, .notes {
+    a {
+        border-bottom: 0;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.quote-source {
     display: block;
     margin: $v-gutter/2 0;
     &:before {
@@ -196,6 +193,7 @@ $type-icon-size: 40px;
         }
     }
 }
+
 .tag-list {
     @include inline-block-list($h-gutter/4);
     .tag {
@@ -237,6 +235,32 @@ $type-icon-size: 40px;
                 background-color: $color-highlight;
             }
         }
+    }
+}
+
+.notes-wrapper {
+    margin: $v-gutter*1.5 0 $v-gutter*1.5 $post-left-gutter;
+}
+.notes {
+    @include vertical-list;
+    @include rem(14px);
+    margin: 0;
+    img.avatar {
+        @include border-radius(2px);
+        padding: 2px;
+        vertical-align: -8px;
+    }
+    .note {
+        padding: 2px 0;
+        blockquote {
+            border-left: 1px solid darken($color-border, 40%);
+            padding: $v-gutter/4 $h-gutter/4;
+            margin: $v-gutter/4 0px 0 $h-gutter*1.5;
+            a { color: $color-body-text; }
+        }
+    }
+    .action {
+        padding-right: $h-gutter/4;
     }
 }
 
