@@ -541,6 +541,7 @@ figcaption, .caption {
   padding: 0;
   border: 0;
   zoom: 1;
+  margin-left: 60px;
 }
 .tag-list:before, .tag-list:after {
   content: "";
@@ -589,6 +590,7 @@ figcaption, .caption {
   font-size: 3.6rem;
   font-family: "IM Fell Flowers";
   text-rendering: optimizeLegibility;
+  line-height: 1;
   content: 'C';
   padding-right: 5px;
 }

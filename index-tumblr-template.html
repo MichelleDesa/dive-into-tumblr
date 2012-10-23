@@ -554,6 +554,7 @@
     padding: 0;
     border: 0;
     zoom: 1;
+    margin-left: 60px;
     }
     .tag-list:before, .tag-list:after {
     content: "";
@@ -602,6 +603,7 @@
     font-size: 3.6rem;
     font-family: "IM Fell Flowers";
     text-rendering: optimizeLegibility;
+    line-height: 1;
     content: 'C';
     padding-right: 5px;
     }
@@ -957,18 +959,18 @@
               {/block:Lines}
             </ul>
             {/block:Chat}
-
-            {block:HasTags}
-            <ul class="tag-list">
-              {block:Tags}
-              <li class="tag">
-                <span class="tip"></span>
-                <a href="{TagURL}">{Tag}</a>
-              </li>
-              {/block:Tags}
-            </ul>
-            {/block:HasTags}
           </article>
+
+          {block:HasTags}
+          <ul class="tag-list">
+            {block:Tags}
+            <li class="tag">
+              <span class="tip"></span>
+              <a href="{TagURL}">{Tag}</a>
+            </li>
+            {/block:Tags}
+          </ul>
+          {/block:HasTags}
 
           <span class="post-separator">a</span>
 

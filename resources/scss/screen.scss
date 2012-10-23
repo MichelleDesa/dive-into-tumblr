@@ -196,6 +196,7 @@ figcaption, .caption {
 
 .tag-list {
     @include inline-block-list($h-gutter/4);
+    margin-left: $post-left-gutter;
     .tag {
         .tip {
             vertical-align: middle;
@@ -223,6 +224,7 @@ figcaption, .caption {
                 @include rem(36px);
                 font-family: $font-separator;
                 text-rendering: optimizeLegibility;
+                line-height: 1;
                 content: 'C';
                 padding-right: $h-gutter/4;
             }
