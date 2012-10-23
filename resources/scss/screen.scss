@@ -90,7 +90,7 @@ figcaption, .caption {
 @include icon(40);
 
 .icon_40x40.type-icon {
-    @include bg-img(transparent, "http://static.tumblr.com/8to5hpx/HT5mbeph3/post-type-icons.png", no-repeat, 0, 0);
+    @include bg-img(transparent, "http://static.tumblr.com/8to5hpx/mMBmccnkg/post-type-icons.png", no-repeat, 0, 0);
 }
 
 .post-metadata {
@@ -141,6 +141,9 @@ figcaption, .caption {
     }
     &.chat .type-icon {
         background-position: 0 -373px;
+    }
+    &.answer .type-icon {
+        background-position: 0 -435px;
     }
 }
 

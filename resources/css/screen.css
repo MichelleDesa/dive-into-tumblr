@@ -390,7 +390,7 @@ figcaption, .caption {
 }
 
 .icon_40x40.type-icon {
-  background: transparent url(http://static.tumblr.com/8to5hpx/HT5mbeph3/post-type-icons.png) no-repeat 0 0;
+  background: transparent url(http://static.tumblr.com/8to5hpx/mMBmccnkg/post-type-icons.png) no-repeat 0 0;
 }
 
 .post-metadata {
@@ -472,6 +472,9 @@ figcaption, .caption {
 .post.chat .type-icon {
   background-position: 0 -373px;
 }
+.post.answer .type-icon {
+  background-position: 0 -435px;
+}
 
 .post-content a, .notes a {
   border-bottom: 0;
@@ -534,6 +537,10 @@ figcaption, .caption {
 .post.chat .speaker:after {
   content: ':';
   padding-right: 5px;
+}
+
+.answer-wrapper {
+    margin-top: 20px;
 }
 
 .tag-list {
